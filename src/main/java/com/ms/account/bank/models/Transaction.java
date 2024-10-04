@@ -7,22 +7,19 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
 
-@Document(collection = "account_bank")
 @Data
-public class AccountBank {
+@Document(collection = "transactions")
+public class Transaction {
+
     @Id
     private String id;
 
     @NotEmpty
-    private String number_acount;
+    private Date date_transaction;
 
     @NotEmpty
-    private Float saldo;
+    private Float importe;
 
     @NotEmpty
-    private TypeAccount type;
-
-    @NotEmpty
-    private Date create_account;
+    private TypeTransaction type;
 }
-
